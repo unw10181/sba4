@@ -3,33 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" defer />
+    <link rel="stylesheet" href="./styles.css" defer />
     <script src="script.js" defer></script>
     <title>Task Management App</title>
   </head>
   <body>
     <h1>Task Management App</h1>
-    <label for="taskName">Task Name</label>
-    <input type="text" name="" id="taskName" />
-    <label for="category">Categoru</label>
-    <select name="Cleaning" id="">
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-    </select>
 
-    <label for="dueDate"></label>
-    <input type="datetime" name="" id="dueDate" />
-    <label for="status"></label>
-    <select name="" id="">
-      <option value=""></option>
-      <option value=""></option>
-    </select>
+    <!-- Input form for html  -->
+    <h2>Input Task</h2>
+    <div class="Task-Input">
+      <form action="#">
+        <label for="taskName">Task Name</label>
+        <input type="text" name="" id="taskName" />
 
-    <button id="addTask">Add Task</button>
+        <label for="taskCategory">Category</label>
+        <select id="taskCcategory">
+          <option value="Shopping">Shopping</option>
+          <option value="Cleaning">Cleaning</option>
+          <option value="Auto">Auto</option>
+          <option value="Cook">Cook</option>
+          <option value="Work">Work</option>
+          <option value="Per Scholas">Per Scholas</option>
+          <option value="Miscellaneous">Miscellaneous</option>
+        </select>
 
-    <h2>Tasks</h2>
+        <label for="taskDeadLine"></label>
+        <input type="datetime-local" id="taskDeadLine" />
+
+        <label for="status">Task Status</label>
+        <select name="status" id="status">
+          <option value="Not Started">Not started</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+
+        <button id="addTaskbtn">Add Task</button>
+      </form>
+    </div>
+
+    <!-- Filter to search -->
+    <h2>Filter Task</h2>
+    <div class="filter">
+      <form action="#">
+        <label>Filter by Status</label>
+        <select name="Filter Status" id="filterStatus">
+          <option value="Not Started">Not Started</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+
+        <label>Filter by Category</label>
+        <select name="Filter Category" id="filterCategory">
+          <option value="Shopping">Shopping</option>
+          <option value="Cleaning">Cleaning</option>
+          <option value="Auto">Auto</option>
+          <option value="Cook">Cook</option>
+          <option value="Work">Work</option>
+          <option value="Per Scholas">Per Scholas</option>
+          <option value="Miscellaneous">Miscellaneous</option>
+        </select>
+
+        <button id="applyFilterbtn">Apply Filter</button>
+      </form>
+    </div>
+
+    <!-- Task List -->
+    <h2>List of Tasks</h2>
     <ul id="taskList"></ul>
   </body>
 </html>
